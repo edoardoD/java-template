@@ -22,5 +22,9 @@ fatti questi passaggi verificare che venga lanciato correttamente il debugger di
 1. **setting.json** permette la configurazione di azioni dell' editor vscode approfondire su internet se interessati
 
 
-Una volta configurata l'app createvi un nuovo repo dove intendete salvare l'app cambiare l'origine dell repo 
+Una volta configurata l'app createvi un nuovo repo dove intendete salvare l'app cambiare l'origine della repo 
+
+0. `git remote rm origin`
+1. `git remote add origin "link alla vostra repo"`
+2. `git remote show origin ` per verificare sia tutto ok
 
