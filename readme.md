@@ -1,3 +1,6 @@
+# Come usare questo repository
+Usare questo repository come template e crearne uno nuvo sul vostro account
+
 # set di una java app
 **nelle operazioni da fare usare solo il terminale e NON avviare l'applicazione usando l'abiente grafico di sviluppo**
 eseguire comandi da terminale in ambiente bash quindi munirsi di gitbash su windows 
