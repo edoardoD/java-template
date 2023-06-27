@@ -33,10 +33,17 @@ dependencies {
     // Suppressions for SpotBugs
     compileOnly("com.github.spotbugs:spotbugs-annotations:4.7.3")
 
-    val jUnitVersion = "5.9.2"
+    // JavaFX: comment out if you do not need them
+    val javaFxVersion = 15
+    for (platform in supportedPlatforms) {
+        for (module in javaFXModules) {
+            implementation("org.openjfx:javafx-$module:$javaFxVersion:$platform")
+        }
+    }
+
+    val jUnitVersion = "5.9.3"
     // JUnit API and testing engine
-    // https://mavenlibs.com/maven/dependency/org.junit.jupiter/junit-jupiter-api
-    implementation ("org.junit.jupiter:junit-jupiter-api:$jUnitVersion")
+    testImplementation("org.junit.jupiter:junit-jupiter-api:$jUnitVersion")
     testRuntimeOnly("org.junit.jupiter:junit-jupiter-engine:$jUnitVersion")
 }
 
@@ -47,12 +54,12 @@ tasks.withType<Test> {
 
 application {
     // Define the main class for the application
-    mainClass.set("myApp")
+    mainClass.set("Main")
 }
 
 tasks.jar {
     manifest {
-        attributes["Main-Class"] = "myApp"
+        attributes["Main-Class"] = "Main"
     }
 }
 
